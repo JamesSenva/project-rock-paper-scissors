@@ -38,17 +38,25 @@ function computerPlay(){
 
 function playRound(playerSelection, computerSelection){
     if(playerSelection == 'ROCK' && computerSelection == 2){
-        console.log('You win! Rock beats Scissors.')
+        console.log('You win! Rock beats Scissors. Humanity has found it\s saviour!');
+        playerScore++;
     } else if(playerSelection == 'PAPER' && computerSelection == 0){
-        console.log('You win! Paper beats Rock.')
+        console.log('You win! Paper beats Rock. Humanity has found it\s saviour!');
+        playerScore++;
     } else if(playerSelection == 'SCISSORS' && computerSelection == 1){
-        console.log('You win! Scissors beats Paper.')
+        console.log('You win! Scissors beats Paper. Humanity has found it\s saviour!');
+        playerScore++;
     } else if(playerSelection == 'SCISSORS' && computerSelection == 0){
-        console.log('You lost! Rock beats Scissors.')
+        console.log('AI is winning. You lost! Rock beats Scissors.');
+        computerScore++;
     } else if(playerSelection == 'ROCK' && computerSelection == 1){
-        console.log('You lost! Paper beats Rock.')
+        console.log('AI is winning. You lost! Paper beats Rock.');
+        computerScore++;
     } else if(playerSelection == 'PAPER' && computerSelection == 2){
-        console.log('You lost! Scissors beats Paper.')
+        console.log('AI is winning. You lost! Scissors beats Paper.');
+        computerScore++;
+    } else{
+        console.log('It\'s a TIE.')
     }
 }
 
@@ -57,6 +65,14 @@ const computerSelection = computerPlay();
 playRound(playerSelection, computerSelection);
 // if you and computer choose the same - TIE
 
-// play 3 times, whoever wins the most is the winner
-// after 3 attempts, whoever has more points wins
+// play 5 times, whoever wins the most is the winner
+// after 5 attempts, whoever has more points wins
+
+/* 
+function game(){
+    for (let i = 0; i < 5, i++) {
+
+    }
+}
+ */
 
